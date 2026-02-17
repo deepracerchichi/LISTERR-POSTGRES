@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, dark, synthwave --default;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Luckiest+Guy&family=Pixelify+Sans:wght@400..700&family=Workbench&display=swap');
+
+@theme {
+  --font-work: "Workbench", sans-serif;
+  --font-clim: "Climate Crisis", sans-serif;
+  --font-pix: "Pixelify Sans", sans-serif;
+  --font-goog: "Google Sans", sans-serif;
+  
+}
