@@ -3,7 +3,12 @@ import dotenv from "dotenv"
 // had to call dotenv.config in here so that it could connect the second time else it wouldn't connect
 dotenv.config();
 
-const db = new pg.Client({
+const db = process.env.DATABASE_URL
+    ? new pg.Client({
+        connectionString: process.env.DATABASE_URL,
+        ssl: {rejectUnauthorized: false}
+    })
+    : new pg.Client({
     user: process.env.PG_USER,
     database: process.env.PG_DATABASE,
     host: process.env.PG_HOST,
